@@ -1,0 +1,9 @@
+{
+  "name": "logica-workflow",
+  "version": "1.0.0",
+  "description": "Skills matching LOGICA @ UIC's dev workflow: opening PRs, reviewing diffs, writing tests, filing roadmap-aligned issues, and keeping code lean.",
+  "author": {
+    "name": "LOGICA @ UIC",
+    "url": "https://github.com/uic-logica"
+  }
+}

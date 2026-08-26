@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "logica-skills",
+  "description": "Claude Code skills for LOGICA @ UIC's dev workflow.",
+  "owner": {
+    "name": "LOGICA @ UIC",
+    "url": "https://github.com/uic-logica"
+  },
+  "plugins": [
+    {
+      "name": "logica-workflow",
+      "description": "PR, review, test, and lean-code skills matching CONTRIBUTING.md and ROADMAP.md.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
