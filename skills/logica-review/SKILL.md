@@ -23,6 +23,7 @@ Or for a PR: `gh pr diff <number>`.
 ## Step 2 — Universal checks (both repos)
 
 - `npm run lint` and `npx tsc --noEmit` pass.
+- `package-lock.json` is in sync with `package.json` (`npm ci` succeeds) — a failing `lint` CI job is often actually `npm ci` rejecting a stale lock file before lint even runs; the fix is `npm install` + commit the lock file, not a lint fix.
 - No secrets: nothing that looks like a token, API key, or connection string; `.env*` files aren't staged (only `.env.example` should ever be committed).
 - The PR is linked to a `roadmap`-labeled issue and doesn't quietly do more than that issue describes — scope creep belongs in its own issue.
 

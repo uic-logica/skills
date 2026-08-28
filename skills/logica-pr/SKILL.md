@@ -25,9 +25,12 @@ If it's `main`, create a branch first: `git checkout -b <yourname>/<short-descri
 ```bash
 npm run lint
 npx tsc --noEmit
+npm ci
 ```
 
 Fix anything that fails before continuing — CI will block the merge otherwise, so catching it now saves a review round-trip.
+
+If you added or updated a package, `npm ci` above will catch a `package-lock.json` that's out of sync with `package.json` (CI uses `npm ci`, which refuses to install when they don't match — it won't just update the lock file like `npm install` does). If that happens, run `npm install` and commit the regenerated `package-lock.json` alongside your change.
 
 ## Step 3 — Find the tracking issue
 
