@@ -14,7 +14,7 @@ Every issue belongs to one product team, so `gh issue list --label "team: <name>
 ## Step 1 — Where it belongs
 
 - Repo: `frontend` or `backend` (file one in each if the work touches both).
-- Team — exactly one of: `team: site`, `team: opportunity-board`, `team: resume-builder`, `team: event-replays`, `team: mock-interviewer`. Team pages: https://github.com/uic-logica/.github/tree/main/docs/teams
+- Team — exactly one of: `team: site`, `team: opportunity-board`, `team: resume-builder`, `team: event-replays`, `team: mock-interviewer`. Team pages: https://github.com/uic-logica/.github/tree/main/projects
 
 ## Step 2 — Title
 
@@ -27,7 +27,7 @@ The team label, plus `bug`, `enhancement`, `accessibility`, `security`, `design`
 ## Step 4 — Body
 
 ```markdown
-Team: [<team>](https://github.com/uic-logica/.github/blob/main/docs/teams/<team>.md) · Milestone: <milestone from the team page>
+Team: [<team>](https://github.com/uic-logica/.github/tree/main/projects/<team>) · Milestone: <GitHub milestone, e.g. "Opportunity board · MVP">
 
 **What:** <one or two sentences>
 
@@ -39,7 +39,7 @@ Team: [<team>](https://github.com/uic-logica/.github/blob/main/docs/teams/<team>
 ## Step 5 — Create it
 
 ```bash
-gh issue create -R uic-logica/<repo> --title "<title>" --label "team: <name>,<type>" --body "<body>"
+gh issue create -R uic-logica/<repo> --title "<title>" --label "team: <name>,<type>" --milestone "<milestone>" --body "<body>"
 ```
 
 Read the body back first — vague "done when" lines are how trackers rot.
