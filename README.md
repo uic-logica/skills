@@ -1,5 +1,7 @@
 # LOGICA @ UIC — skills
 
+> **Owner:** [@nicolasrufino](https://github.com/nicolasrufino) · **Last reviewed:** Sep 29, 2026 · **Audience:** LOGICA members using Claude Code · **Type:** Landing page
+
 Claude Code skills for how we actually work — not generic advice, they're built around [CONTRIBUTING.md](https://github.com/uic-logica/.github/blob/main/CONTRIBUTING.md) and [ROADMAP.md](https://github.com/uic-logica/.github/blob/main/ROADMAP.md). Install once, then type `/` in any LOGICA repo (or ask for the thing in plain language) and Claude follows our process instead of a generic one.
 
 ## Install (one time)
