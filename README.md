@@ -18,7 +18,7 @@ That's it — the skills are then available in every project, not just this one.
 | [`logica-pr`](skills/logica-pr/SKILL.md) | Open a PR: branch off `main`, lint + typecheck locally, link the tracking issue, fill the PR template, push, `gh pr create`. |
 | [`logica-review`](skills/logica-review/SKILL.md) | Review a diff or PR: role checks happen server-side, migrations are committed, no secrets, accessible frontend markup, scope matches the linked issue. |
 | [`logica-test`](skills/logica-test/SKILL.md) | Write a test for something you changed — scoped to the change, using whatever runner the repo already has (asks before adding a new one). |
-| [`logica-issue`](skills/logica-issue/SKILL.md) | File a new issue in the same `[Step N]` / `[Addition]` format as the rest of the roadmap tracker, with the right labels and a real "done when" line. |
+| [`logica-issue`](skills/logica-issue/SKILL.md) | File a new issue labeled with its product team (`team: …`), linked to the team page, with a real "done when" line. |
 | [`logica-lean`](skills/logica-lean/SKILL.md) | Cut a solution down to size for *our* stack specifically — Tailwind/Prisma/Auth.js already cover a lot, use that before reaching for a new dependency or abstraction. Same spirit as the general-purpose `ponytail` skill, just aimed at our exact tools. |
 
 Say what you want in plain language ("open a PR for this", "review my branch", "is this over-engineered?") — Claude picks the matching skill on its own. You can also invoke one directly by name once it's installed.

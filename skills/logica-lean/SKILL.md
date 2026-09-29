@@ -12,7 +12,7 @@ description: >
 
 Our version of "does this really need to exist" — aimed at the exact stack we already picked, so it doesn't just repeat generic advice. Stop at the first rung that holds:
 
-1. **Does this need to exist at all?** If it's for a roadmap step nobody's started yet, skip it and say so — don't build ahead of the step you're on.
+1. **Does this need to exist at all?** If it's for a milestone nobody's started yet, skip it and say so — don't build ahead of the step you're on.
 2. **Does Tailwind or plain HTML already do it?** A native `<input type="date">`, `<dialog>`, or CSS behavior beats a component library import, every time.
 3. **Does Prisma already model this?** Check `prisma/schema.prisma` before adding a parallel data structure, a second source of truth, or an in-memory cache of something the database already answers directly.
 4. **Does something already in `lib/` do this?** Especially `lib/prisma.ts`'s shared client — never `new PrismaClient()` in a route.
@@ -25,7 +25,7 @@ Our version of "does this really need to exist" — aimed at the exact stack we 
 - An interface or config option with exactly one implementation and no second one planned.
 - A generic "form builder" abstraction hand-built before Step 7 actually calls for one.
 - Custom validation/auth logic duplicating what Auth.js's `signIn`/`session` callbacks already do.
-- Boilerplate "for later" — a step from the roadmap that hasn't started yet doesn't need scaffolding today.
+- Boilerplate "for later" — a milestone that hasn't started yet doesn't need scaffolding today.
 
 ## What never gets simplified away
 
