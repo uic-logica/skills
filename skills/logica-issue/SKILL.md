@@ -2,60 +2,44 @@
 name: logica-issue
 description: >
   File a new GitHub issue on the frontend or backend repo in LOGICA @ UIC's
-  tracking format — titled and labeled to match ROADMAP.md, linked back to
-  the roadmap section it's part of, with a concrete "done when" line. Use
-  when the user says "file an issue", "open an issue for this", "track this",
-  or "/logica-issue".
+  tracking format — labeled with its product team, linked to that team's page,
+  with a concrete "done when" line. Use when the user says "file an issue",
+  "open an issue for this", "track this", or "/logica-issue".
 ---
 
 # LOGICA Issue
 
-Keeps every issue in the same shape as the existing roadmap tracker, so `gh issue list --label roadmap` stays a real project board and not a pile of inconsistent tickets.
+Every issue belongs to one product team, so `gh issue list --label "team: <name>"` is that team's board.
 
-## Step 1 — Figure out where it belongs
+## Step 1 — Where it belongs
 
-- Which repo: `frontend` or `backend` (or both — file one in each if the work has parts on both sides).
-- Does it belong to a numbered step in [ROADMAP.md](https://github.com/uic-logica/.github/blob/main/ROADMAP.md), or is it an unordered item from the **Additions** list? If it's neither, ask whether it should be added to the roadmap first, or whether it's a plain `bug`/`enhancement` outside the roadmap (those don't need the `roadmap` label or the step-number title).
+- Repo: `frontend` or `backend` (file one in each if the work touches both).
+- Team — exactly one of: `team: site`, `team: opportunity-board`, `team: resume-builder`, `team: event-replays`, `team: mock-interviewer`. Team pages: https://github.com/uic-logica/.github/tree/main/projects
 
 ## Step 2 — Title
 
-- Roadmap step: `[Step N] <short description>`
-- Addition: `[Addition] <short description>`
-- Anything else (bug, small fix): plain descriptive title, no prefix.
+A plain, specific title of what changes ("Feed filters roles by class year"). No `[Step N]` prefixes — that format is retired.
 
 ## Step 3 — Labels
 
-Reuse the labels that already exist — don't invent new ones ad hoc:
-
-```bash
-gh label list -R uic-logica/<repo>
-```
-
-Roadmap issues get `roadmap` + the repo's own label (`frontend`/`backend`) + `enhancement` (unless it's foundational/onboarding work, which skips `enhancement`). Add `bug`, `accessibility`, `security`, `design`, or `docs` on top when they genuinely apply.
+The team label, plus `bug`, `enhancement`, `accessibility`, `security`, `design` or `docs` when they genuinely apply. Reuse existing labels (`gh label list -R uic-logica/<repo>`); don't invent new ones.
 
 ## Step 4 — Body
 
-Match the existing format:
-
 ```markdown
-Part of [Step N — <name>](https://github.com/uic-logica/.github/blob/main/ROADMAP.md#step-n--<slug>).
+Team: [<team>](https://github.com/uic-logica/.github/tree/main/projects/<team>) · Milestone: <GitHub milestone, e.g. "Opportunity board · MVP">
 
-**What:** <what this issue covers, one or two sentences>
+**What:** <one or two sentences>
 
-**Depends on:** <another issue/step, or omit this line if nothing blocks it>
+**Depends on:** <issue, or omit>
 
-**Done when:** <one concrete, checkable statement of completion>
+**Done when:** <one concrete, checkable statement>
 ```
-
-For an Addition, link `#additions` instead of a step anchor.
 
 ## Step 5 — Create it
 
 ```bash
-gh issue create -R uic-logica/<repo> \
-  --title "<title>" \
-  --label "<labels, comma-separated>" \
-  --body "<body>"
+gh issue create -R uic-logica/<repo> --title "<title>" --label "team: <name>,<type>" --milestone "<milestone>" --body "<body>"
 ```
 
-Read the body back before creating — vague "done when" lines are the most common way these trackers rot into noise.
+Read the body back first — vague "done when" lines are how trackers rot.

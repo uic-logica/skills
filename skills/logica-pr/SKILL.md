@@ -31,10 +31,10 @@ Fix anything that fails before continuing — CI will block the merge otherwise,
 
 ## Step 3 — Find the tracking issue
 
-Every roadmap piece of work has an issue (`[Step N] ...` or `[Addition] ...`, labeled `roadmap`) on the repo you're in. Look it up:
+Every piece of work has an issue labeled with its team (`team: site`, `team: opportunity-board`, …) on the repo you're in. Look it up:
 
 ```bash
-gh issue list -R uic-logica/<frontend-or-backend> --label roadmap
+gh issue list -R uic-logica/<frontend-or-backend> --label "team: <name>"
 ```
 
 If there genuinely isn't one yet, use the `logica-issue` skill to file it first — don't ship untracked work.

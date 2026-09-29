@@ -4,7 +4,7 @@ description: >
   Review a diff or PR against LOGICA @ UIC's specific standards, not just
   generic code quality: server-side role checks, committed Prisma migrations,
   no secrets, accessible frontend markup, and scope matching the linked
-  roadmap issue. Use when the user says "review this PR", "review my diff",
+  team issue. Use when the user says "review this PR", "review my diff",
   "review this branch", or "/logica-review".
 ---
 
@@ -24,7 +24,7 @@ Or for a PR: `gh pr diff <number>`.
 
 - `npm run lint` and `npx tsc --noEmit` pass.
 - No secrets: nothing that looks like a token, API key, or connection string; `.env*` files aren't staged (only `.env.example` should ever be committed).
-- The PR is linked to a `roadmap`-labeled issue and doesn't quietly do more than that issue describes — scope creep belongs in its own issue.
+- The PR is linked to a team-labeled issue (`team: …`) and doesn't quietly do more than that issue describes — scope creep belongs in its own issue.
 
 ## Step 3 — Backend-specific checks (`backend` repo)
 
